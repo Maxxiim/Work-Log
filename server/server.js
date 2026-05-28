@@ -6,7 +6,8 @@ import cors from "cors";
 
 const app = express();
 
-app.use(cors({ origin: "http://localhost:5173" }));
+// app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors());
 
 const adapter = new PrismaBetterSqlite3({
   url: process.env.DATABASE_URL,
