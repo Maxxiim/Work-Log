@@ -1,0 +1,47 @@
+.wrapper {
+  width: 100%;
+  max-width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  padding: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.desktopTable {
+  display: block;
+  width: 100%;
+}
+
+.mobileList {
+  display: none;
+}
+
+.table {
+  width: 100%;
+
+  :global(.ant-table-pagination) {
+    justify-content: center !important;
+    margin: 16px 0 8px !important;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .desktopTable {
+    display: none;
+  }
+
+  .mobileList {
+    display: block;
+    padding: 8px;
+  }
+
+  .wrapper {
+    padding: 0;
+  }
+}

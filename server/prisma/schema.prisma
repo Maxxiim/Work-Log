@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Work {
+  id    Int      @id @default(autoincrement())
+  date   DateTime @default(now())
+  work   String
+  name   String
+  volume Float    @default(0)
+  unit   String
+}

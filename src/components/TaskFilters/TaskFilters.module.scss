@@ -1,0 +1,28 @@
+.filters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) auto;
+  gap: 12px;
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: center;
+}
+
+.field {
+  width: 100%;
+  min-width: 0;
+}
+
+.resetButton {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .filters {
+    grid-template-columns: 1fr;
+    padding: 12px 8px;
+  }
+
+  .resetButton {
+    width: 100%;
+  }
+}
