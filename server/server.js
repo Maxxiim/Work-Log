@@ -6,8 +6,16 @@ import cors from "cors";
 
 const app = express();
 
-// app.use(cors({ origin: "http://localhost:5173" }));
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://work-log-gilt.vercel.app",
+      "https://work-log-git-main-maksim-safronovs-projects.vercel.app",
+      "https://work-35dttci0l-maksim-safronovs-projects.vercel.app",
+    ],
+  }),
+);
 
 const adapter = new PrismaBetterSqlite3({
   url: process.env.DATABASE_URL,
